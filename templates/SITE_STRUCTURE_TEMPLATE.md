@@ -1,6 +1,7 @@
 # Site Structure & Design System
 
 ## 1. Design System
+**Aesthetic Style:** [Style Name]
 **Theme Mode:** [Light | Dark]
 
 **Color Palette (CSS Variables):**

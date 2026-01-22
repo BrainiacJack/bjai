@@ -12,9 +12,22 @@ Produce a detailed `SITE_STRUCTURE.md` file that defines the website's architect
 **Instructions:**
 1.  **Analyze Request:** Understand the type of website, target audience, and key features requested.
 2.  **Define Design System:**
-    -   Choose a strict **Light** or **Dark** mode.
-    -   Select a cohesive 5-color palette (Background, Foreground, Primary, Secondary, Accent).
-    -   Select appropriate Google Fonts for Body and Headings.
+    -   **Aesthetic Style:** Select one distinct style that best fits the project. Options include:
+        1.  **Minimalist / Clean:** Lots of whitespace, simple typography, focus on content.
+        2.  **Luxury / High-End:** Serif fonts, gold/black/white palettes, elegant spacing.
+        3.  **Corporate / Professional:** Trustworthy blues/greys, structured grids, standard sans-serifs.
+        4.  **Tech / SaaS:** Gradients, glassmorphism, dark mode defaults, modern sans-serifs.
+        5.  **Creative / Brutalist:** Bold typography, high contrast, raw layout elements.
+        6.  **Playful / Neubrutalism:** Vibrant colors, thick borders, quirky fonts, rounded corners.
+        7.  **Nature / Organic:** Earth tones, soft corners, texture-inspired elements.
+        8.  **Industrial:** Monospaced fonts, technical lines, raw grey tones.
+        9.  **Retro / Nostalgic:** Pixel art, 80s/90s colors, serif/display hybrids.
+        10. **Futuristic / Cyberpunk:** Neon accents, dark backgrounds, glitch effects.
+        11. **Academic / Editorial:** Heavy focus on typography, grid precision, muted colors.
+        12. **Wellness / Calm:** Pastels, soft gradients, rounded shapes, airy layout.
+    -   **Theme Mode:** Choose a strict **Light** or **Dark** mode.
+    -   **Color Palette:** Select a cohesive 5-color palette (Background, Foreground, Primary, Secondary, Accent) matching the chosen style.
+    -   **Typography:** Select appropriate Google Fonts for Body and Headings matching the chosen style.
 3.  **Map Site Structure:**
     -   List all necessary pages (Home, About, etc.).
     -   For *each* page, brainstorm the specific UI components needed to tell the story or perform the function (e.g., Hero, Features Grid, Testimonials, Contact Form).
