@@ -45,7 +45,13 @@
 
 ---
 
-## 4. Data Architecture
+## 4. Analytics Strategy
+- **Tracking ID:** [Placeholder for GA Tracking ID]
+- **Key Events:**
+  - [Component/Interaction]: [Event Category] / [Event Action]
+  - [Component/Interaction]: [Event Category] / [Event Action]
+
+## 5. Data Architecture
 The following JSON files will be created in `data/`:
 - `site-config.json`: Global metadata and navigation.
 - [List of other JSON files mapped to pages above]

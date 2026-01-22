@@ -7,7 +7,7 @@ prompt = """
 {{args}}
 
 **Goal:**
-Produce a detailed `SITE_STRUCTURE.md` file that defines the website's architecture, design system, and content strategy. This file will be used by the `generate-web` command to build the site.
+Produce a detailed `SITE_STRUCTURE.md` file that defines the website's architecture, design system, content strategy, and analytics plan. This file will be used by the `generate-web` command to build the site.
 
 **Pre-requisite Check:**
 1.  Check if the `ui-ux-pro-max` skill is available at `.claude/skills/ui-ux-pro-max`.
@@ -42,8 +42,11 @@ Produce a detailed `SITE_STRUCTURE.md` file that defines the website's architect
 4.  **Image Strategy:**
     -   Define a consistent naming convention for placeholder images (e.g., `placeholder-[page]-[section]-[index].jpg`).
     -   Ensure all proposed placeholders follow the defined dimensions/aspect ratios.
+5.  **Analytics Strategy:**
+    -   Define a strategy for capturing all click events and page navigation using Google Analytics.
+    -   Identify key interaction points (buttons, links, carousels) that require specific event tracking labels.
 
-5.  **Data Strategy:**
+6.  **Data Strategy:**
     -   Map each page/section to a JSON data file in the `data/` directory to ensure content is dynamic and editable.
 
 **Output Format:**

@@ -57,12 +57,17 @@ Scaffold the following reusable components ensuring they match the **Aesthetic S
 - **Naming:** Follow the "Image Strategy" naming convention from the plan.
 - **Verification:** Ensure all generated `<img>` or `<Image>` tags have valid `src`, `alt`, `width`, and `height` attributes.
 
-**9. Performance**
+**9. Analytics**
+- **Google Analytics:** Implement Google Analytics (GA4) using `@next/third-parties/google` or a similar lightweight approach.
+- **Event Tracking:** Implement a global event listener or specific handlers to capture **all clicks** on interactive elements (buttons, links, tabs) and **page navigation** events.
+- **Data Attributes:** Ensure interactive components accept `data-event-category` and `data-event-action` props to populate GA events dynamically based on the `Analytics Strategy` in `SITE_STRUCTURE.md`.
+
+**10. Performance**
 - Optimize image assets for build-time usage (since runtime optimization is disabled).
 - Implement lazy loading for offscreen content.
 - Minimize bundle size.
 
-**10. CI/CD & Deployment (`firebase.json` & `.github/`)**
+**11. CI/CD & Deployment (`firebase.json` & `.github/`)**
 - Create `firebase.json`: Host from the `out` directory and enable `cleanUrls: true`.
 - Create `.github/workflows/deploy-prod.yml`: Build and deploy to Firebase `live` channel on merge to `main`.
 - Create `.github/workflows/deploy-preview.yml`: Build and deploy to Firebase `preview` channel on Pull Request.
