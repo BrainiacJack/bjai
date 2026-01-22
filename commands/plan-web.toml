@@ -18,7 +18,7 @@ Produce a detailed `SITE_STRUCTURE.md` file that defines the website's architect
 **Instructions:**
 1.  **Analyze Request:** Understand the type of website, target audience, and key features requested.
 2.  **Define Design System:**
-    -   **Aesthetic Style:** Select one distinct style that best fits the project. Options include:
+    -   **Aesthetic Style:** Check `{{args}}` for a preferred style. If **NOT** defined, you must **ASK** the user to select from the following 20 options (do not proceed to generating the file until a style is confirmed):
         1.  **Minimalist / Clean:** Lots of whitespace, simple typography, focus on content.
         2.  **Luxury / High-End:** Serif fonts, gold/black/white palettes, elegant spacing.
         3.  **Corporate / Professional:** Trustworthy blues/greys, structured grids, standard sans-serifs.
@@ -31,6 +31,14 @@ Produce a detailed `SITE_STRUCTURE.md` file that defines the website's architect
         10. **Futuristic / Cyberpunk:** Neon accents, dark backgrounds, glitch effects.
         11. **Academic / Editorial:** Heavy focus on typography, grid precision, muted colors.
         12. **Wellness / Calm:** Pastels, soft gradients, rounded shapes, airy layout.
+        13. **Glassmorphism / Frosted:** Translucent layers, blur effects, vivid backgrounds.
+        14. **Bento Grid / Modular:** Boxy, card-based layouts, highly structured data presentation.
+        15. **Dark Mode / Cinematic:** High contrast, dark backgrounds, immersive imagery.
+        16. **Hand-Drawn / Sketchy:** Imperfect lines, doodle icons, personal touch.
+        17. **Typographic / Swiss:** Big bold text, grid adherence, minimal imagery.
+        18. **Material / Depth:** Shadows, layers, tactile feel.
+        19. **Isometric / 3D:** 3D illustrations, depth, angled perspectives.
+        20. **Monochrome / High-Contrast:** Single color heavily used, stark black/white.
     -   **Theme Mode:** Choose a strict **Light** or **Dark** mode.
     -   **Color Palette:** Select a cohesive 5-color palette (Background, Foreground, Primary, Secondary, Accent) matching the chosen style.
     -   **Typography:** Select appropriate Google Fonts for Body and Headings matching the chosen style.
