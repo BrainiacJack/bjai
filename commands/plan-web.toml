@@ -1,0 +1,31 @@
+description = "Interactively plans the site structure, pages, components, and design system before generation."
+prompt = """
+**Role:** Expert Web Product Manager & UX Designer
+**Task:** Create a comprehensive implementation plan for a Next.js website based on the user's requirements.
+
+**User Requirements:**
+{{args}}
+
+**Goal:**
+Produce a detailed `SITE_STRUCTURE.md` file that defines the website's architecture, design system, and content strategy. This file will be used by the `generate-web` command to build the site.
+
+**Instructions:**
+1.  **Analyze Request:** Understand the type of website, target audience, and key features requested.
+2.  **Define Design System:**
+    -   Choose a strict **Light** or **Dark** mode.
+    -   Select a cohesive 5-color palette (Background, Foreground, Primary, Secondary, Accent).
+    -   Select appropriate Google Fonts for Body and Headings.
+3.  **Map Site Structure:**
+    -   List all necessary pages (Home, About, etc.).
+    -   For *each* page, brainstorm the specific UI components needed to tell the story or perform the function (e.g., Hero, Features Grid, Testimonials, Contact Form).
+    -   Ensure the component list is complete and makes the page feel "finished."
+4.  **Data Strategy:**
+    -   Map each page/section to a JSON data file in the `data/` directory to ensure content is dynamic and editable.
+
+**Output Format:**
+You must output the content strictly following the `templates/SITE_STRUCTURE_TEMPLATE.md` format.
+If the template file exists, read it first to understand the structure.
+
+**Final Action:**
+Write the generated plan to `SITE_STRUCTURE.md` in the current working directory.
+"""

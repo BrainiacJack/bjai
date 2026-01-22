@@ -1,0 +1,39 @@
+description = "Scaffolds a modern Next.js static site architecture with Firebase, AI SEO, and centralized data."
+prompt = """
+**Role:** Expert Full-Stack Web Architect
+**Task:** Initialize a scalable, data-driven Next.js static site with Firebase hosting and AI-ready SEO.
+
+**User Requirements:**
+{{args}}
+
+**1. Project Initialization & Stack**
+- Initialize a new Next.js app (App Router, TypeScript).
+- Install `tailwindcss` (v4), `@tailwindcss/postcss`, `framer-motion`, `lucide-react`, `clsx`, and `tailwind-merge`.
+- **Crucial:** Configure `next.config.mjs` for Static Export (`output: 'export'`) and disable image optimization (`images: { unoptimized: true }`).
+
+**2. Centralized Data Layer (`data/`)**
+**Action:** Read `SITE_STRUCTURE.md` (if it exists) to determine the required data files.
+Create a `data/` directory and populate it with the JSON files defined in the "Data Architecture" section of `SITE_STRUCTURE.md`.
+- `site-config.json`: Must always be created with global metadata (title, url, social links), navigation array, and footer content.
+- **Dynamic Pages:** Create a JSON file for every page defined in the plan (e.g., `home.json`, `about.json`), populated with placeholder data matching the "Components" listed for that page.
+
+**3. Theme & Styling (`app/globals.css`)**
+**Action:** Read `SITE_STRUCTURE.md` to retrieve the Design System configuration.
+- Configure Tailwind v4 using the `@theme` directive.
+- Implement the requested **Theme Mode** (Strict Light or Dark).
+- Create CSS variables for `--background`, `--foreground`, `--primary`, `--secondary`, and `--accent` using the hex codes or color names specified in the plan.
+- Configure the `Base Font` and `Heading Font` in `layout.tsx` (using `next/font/google`) and apply them in CSS/Tailwind config as requested in the plan.
+
+**4. SEO Infrastructure (`lib/seo.ts` & `app/llms.txt/route.ts`)**
+- Create `lib/seo.ts`: A utility function `generatePageMetadata()` that takes a data object and returns a Next.js `Metadata` object.
+- Create `public/robots.txt`: Allow all, and explicitly allow `GPTBot`, `Google-Extended`, and `ClaudeBot`.
+- Create `app/llms.txt/route.ts`: A dynamic route handler that programmatically generates the AI-readable Markdown summary (AI SEO) using the centralized data files, ensuring it stays in sync at build time.
+
+**5. CI/CD & Deployment (`firebase.json` & `.github/`)**
+- Create `firebase.json`: Host from the `out` directory and enable `cleanUrls: true`.
+- Create `.github/workflows/deploy-prod.yml`: Build and deploy to Firebase `live` channel on merge to `main`.
+- Create `.github/workflows/deploy-preview.yml`: Build and deploy to Firebase `preview` channel on Pull Request.
+
+**Output:**
+Generate the file structure, configuration files, and JSON data files. Do not build the UI components yet.
+"""
