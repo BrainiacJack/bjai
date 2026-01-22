@@ -9,6 +9,12 @@ prompt = """
 **Goal:**
 Produce a detailed `SITE_STRUCTURE.md` file that defines the website's architecture, design system, and content strategy. This file will be used by the `generate-web` command to build the site.
 
+**Pre-requisite Check:**
+1.  Check if the `ui-ux-pro-max` skill is available at `.claude/skills/ui-ux-pro-max`.
+2.  If NOT available, run the following command to install it:
+    `git clone https://github.com/nextlevelbuilder/ui-ux-pro-max-skill .claude/skills/ui-ux-pro-max`
+3.  Once available (or if already present), use the skill to inform your design decisions, specifically for color palettes, typography pairings, and UX best practices matching the user's request.
+
 **Instructions:**
 1.  **Analyze Request:** Understand the type of website, target audience, and key features requested.
 2.  **Define Design System:**
