@@ -37,8 +37,13 @@ Produce a detailed `SITE_STRUCTURE.md` file that defines the website's architect
 3.  **Map Site Structure:**
     -   List all necessary pages (Home, About, etc.).
     -   For *each* page, brainstorm the specific UI components needed to tell the story or perform the function (e.g., Hero, Features Grid, Testimonials, Contact Form).
+    -   **Images:** For every component, identify if it needs images. If so, specify the **Aspect Ratio** and **Minimum Dimensions** to ensure the design remains robust.
     -   Ensure the component list is complete and makes the page feel "finished."
-4.  **Data Strategy:**
+4.  **Image Strategy:**
+    -   Define a consistent naming convention for placeholder images (e.g., `placeholder-[page]-[section]-[index].jpg`).
+    -   Ensure all proposed placeholders follow the defined dimensions/aspect ratios.
+
+5.  **Data Strategy:**
     -   Map each page/section to a JSON data file in the `data/` directory to ensure content is dynamic and editable.
 
 **Output Format:**

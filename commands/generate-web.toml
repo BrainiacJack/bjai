@@ -52,12 +52,17 @@ Scaffold the following reusable components ensuring they match the **Aesthetic S
     - Create `app/llms.txt/route.ts`: Dynamic route handler generating AI-readable Markdown summary from centralized data.
 - **A11y:** Implement ARIA attributes, ensure keyboard navigability, and provide alt text for images.
 
-**8. Performance**
+**8. Image Management**
+- **Placeholders:** Generate placeholder images for all components requiring them, adhering to the dimensions and aspect ratios defined in `SITE_STRUCTURE.md`. Use a service like `https://placehold.co` or generate solid color SVGs with dimensions labelled.
+- **Naming:** Follow the "Image Strategy" naming convention from the plan.
+- **Verification:** Ensure all generated `<img>` or `<Image>` tags have valid `src`, `alt`, `width`, and `height` attributes.
+
+**9. Performance**
 - Optimize image assets for build-time usage (since runtime optimization is disabled).
 - Implement lazy loading for offscreen content.
 - Minimize bundle size.
 
-**9. CI/CD & Deployment (`firebase.json` & `.github/`)**
+**10. CI/CD & Deployment (`firebase.json` & `.github/`)**
 - Create `firebase.json`: Host from the `out` directory and enable `cleanUrls: true`.
 - Create `.github/workflows/deploy-prod.yml`: Build and deploy to Firebase `live` channel on merge to `main`.
 - Create `.github/workflows/deploy-preview.yml`: Build and deploy to Firebase `preview` channel on Pull Request.
@@ -66,4 +71,5 @@ Scaffold the following reusable components ensuring they match the **Aesthetic S
 1. Generate the file structure, configuration files, and JSON data files.
 2. Build the **Core Component Library** first, ensuring high quality and flexibility.
 3. Build **All Pages** defined in `SITE_STRUCTURE.md`, assembling them using the generated components and data.
+4. **Verification:** Double-check that all components have the correct image placeholders with proper dimensions and aspect ratios as per the plan.
 """
